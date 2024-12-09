@@ -4,7 +4,6 @@ import { validateLogin, validateForgotPassword } from '../validators/auth.valida
 
 const router = express.Router();
 
-// Public routes
 router.post('/login', validateLogin, authController.login);
 router.post('/forgot-password', validateForgotPassword, authController.forgotPassword);
 
