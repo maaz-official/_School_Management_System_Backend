@@ -11,4 +11,4 @@ export const verifyToken = (token) => {
       resolve(decoded);
     });
   });
-}; 
+};

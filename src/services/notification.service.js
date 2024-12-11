@@ -15,7 +15,9 @@ export class NotificationService {
         title: notification.title,
         message: notification.message,
         type: notification.type,
-        relatedTo: notification.relatedTo
+        priority: notification.priority,
+        relatedTo: notification.relatedTo,
+        expiresAt: notification.expiresAt
       });
 
       // Send email notification if enabled

@@ -6,7 +6,9 @@ const router = express.Router();
 
 router.use(authenticate);
 
-router.post('/', authorize('admin'), feeController.addFees);
-router.get('/:studentId', authorize('admin', 'student'), feeController.getFees);
+router.post('/', authorize('admin'), feeController.addFee);
+router.post('/:feeId/payment', authorize('admin'), feeController.recordPayment);
+router.get('/:studentId', authorize('admin', 'student'), feeController.getFeeDetails);
+router.put('/:feeId', authorize('admin'), feeController.updateFee);
 
 export { router as feeRoutes };
