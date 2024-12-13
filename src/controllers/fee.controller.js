@@ -2,7 +2,7 @@ import { Fee } from '../models/fee.model.js';
 import { Student } from '../models/student.model.js';
 import { AppError } from '../utils/appError.js';
 import { NotificationService } from '../services/notification.service.js';
-import { generateReceipt } from '../utils/reportGenerator.js';
+import { generateReceipt } from '../utils/receiptGenerator.js';
 
 export const feeController = {
   async addFee(req, res, next) {
